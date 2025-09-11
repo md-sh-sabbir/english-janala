@@ -93,7 +93,8 @@
                     <label class="input validator mb-5">
                         <input type="password" required placeholder="Password" minlength="8"
                             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                            title="Must be more than 8 characters, including number, lowercase letter, uppercase letter" /> <br>
+                            title="Must be more than 8 characters, including number, lowercase letter, uppercase letter" />
+                        <br>
                     </label> <br>
                     <button type="submit" class="btn btn-primary">Get Started</button>
                 </form>
@@ -112,10 +113,25 @@
             <div id="level-container" class="flex justify-center gap-5 flex-wrap"></div>
         </section>
 
+        <section class="flex justify-center mt-10">
+            <div class="join">
+                <div>
+                    <label class="input validator join-item">
+                        <input id="input-search" type="text" placeholder="Search Vocabulary Now" required />
+                    </label>
+                </div>
+                <button id="btn-search" class="btn btn-primary join-item">Search</button>
+            </div>
+        </section>
+
+        <section id="spinner" class="flex justify-center items-center py-10 hidden">
+            <span class="loading loading-bars loading-xl"></span>
+        </section>
+
         <section id="word-container" class="bg-gray-100 p-10 my-10 grid grid-cols-3 gap-6">
             <div class="text-center bg-sky-100 col-span-full rounded-xl py-10 space-y-6 font-[Hind_Siliguri]">
-                    <p class="text-xl font-medium text-gray-400">আপনি এখনো কোন Lesson Select করেন নি</p>
-                    <h2 class="font-bold text-4xl">একটি Lesson Select করুন।</h2>
+                <p class="text-xl font-medium text-gray-400">আপনি এখনো কোন Lesson Select করেন নি</p>
+                <h2 class="font-bold text-4xl">একটি Lesson Select করুন।</h2>
             </div>
         </section>
     </main>
@@ -123,9 +139,9 @@
     <!-- Open the modal using ID.showModal() method -->
     <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
     <dialog id="word_modal" class="modal modal-bottom sm:modal-middle">
-    <div class="modal-box">
-        <div id="details-container" class="space-y-5">
-            <!-- <div class="">
+        <div class="modal-box">
+            <div id="details-container" class="space-y-5">
+                <!-- <div class="">
                 <h2 class="text-2xl font-bold">Eager (<i class="fa-solid fa-microphone-lines"></i>  :ইগার)</h2>
             </div>
             <div class="">
@@ -142,14 +158,14 @@
                 <span class="btn">Syn2</span>
                 <span class="btn">Syn3</span>
             </div> -->
+            </div>
+            <div class="modal-action">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close</button>
+                </form>
+            </div>
         </div>
-        <div class="modal-action">
-        <form method="dialog">
-            <!-- if there is a button in form, it will close the modal -->
-            <button class="btn">Close</button>
-        </form>
-        </div>
-    </div>
     </dialog>
 
     <script src="assests/js/index.js"></script>
